@@ -1,0 +1,42 @@
+{
+  "name": "@vite-userscripts/storage-provider",
+  "version": "0.1.0",
+  "description": "Storage provider for userscripts with IndexedDB, GitHub Gist, and Perplexity API integration",
+  "type": "module",
+  "main": "./dist/storage-provider.umd.js",
+  "module": "./dist/storage-provider.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/storage-provider.es.js",
+      "require": "./dist/storage-provider.umd.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "dev": "vite build --watch --mode development",
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "idb": "^8.0.0",
+    "pako": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/pako": "^2.0.3",
+    "typescript": "^5.6.0",
+    "vite": "^5.4.0",
+    "vite-plugin-monkey": "^4.0.0"
+  },
+  "keywords": [
+    "userscript",
+    "storage",
+    "indexeddb",
+    "github",
+    "perplexity",
+    "vite",
+    "monkey"
+  ],
+  "author": "pv-udpv",
+  "license": "MIT"
+}
